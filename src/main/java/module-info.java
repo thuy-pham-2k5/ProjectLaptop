@@ -3,6 +3,6 @@ module com.example.ngay1 {
     requires javafx.fxml;
 
 
-    opens com.example.ngay1 to javafx.fxml;
-    exports com.example.ngay1;
+    opens com.example.shop_laptop to javafx.fxml;
+    exports com.example.shop_laptop;
 }

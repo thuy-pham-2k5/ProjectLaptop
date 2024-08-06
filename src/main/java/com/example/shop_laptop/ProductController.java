@@ -1,4 +1,4 @@
-package com.example.ngay1;
+package com.example.shop_laptop;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,7 +7,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.TableCell;
 import javafx.scene.layout.HBox;
@@ -15,15 +14,15 @@ import javafx.util.Callback;
 
 public class ProductController {
     @FXML
-    private TableView<Product> productTable;
+    private TableView<LaptopProduct> productTable;
     @FXML
-    private TableColumn<Product, String> nameColumn;
+    private TableColumn<LaptopProduct, String> nameColumn;
     @FXML
-    private TableColumn<Product, Double> priceColumn;
+    private TableColumn<LaptopProduct, Double> priceColumn;
     @FXML
-    private TableColumn<Product, Integer> quantityColumn;
+    private TableColumn<LaptopProduct, Integer> quantityColumn;
     @FXML
-    private TableColumn<Product, Void> actionColumn; // Use Void for custom cell content
+    private TableColumn<LaptopProduct, Void> actionColumn; // tùy chỉnh
 
     @FXML
     private TextField nameField;
@@ -32,20 +31,20 @@ public class ProductController {
     @FXML
     private TextField quantityField;
 
-    private ObservableList<Product> productList = FXCollections.observableArrayList();
+    private ObservableList<LaptopProduct> productList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-        // Initialize table columns
+        // Khởi tạo cột bảng
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<>("quantity"));
 
-        // Custom cell factory for actionColumn
-        actionColumn.setCellFactory(new Callback<TableColumn<Product, Void>, TableCell<Product, Void>>() {
+        // tạo ô tùy chỉnh
+        actionColumn.setCellFactory(new Callback<TableColumn<LaptopProduct, Void>, TableCell<LaptopProduct, Void>>() {
             @Override
-            public TableCell<Product, Void> call(TableColumn<Product, Void> param) {
-                return new TableCell<Product, Void>() {
+            public TableCell<LaptopProduct, Void> call(TableColumn<LaptopProduct, Void> param) {
+                return new TableCell<LaptopProduct, Void>() {
                     private final Button editButton = new Button("Edit");
                     private final Button deleteButton = new Button("Delete");
                     private final HBox hbox = new HBox(editButton, deleteButton);
@@ -70,7 +69,7 @@ public class ProductController {
             }
         });
 
-        // Set items to the table
+        // Đặt các mục vào bảng
         productTable.setItems(productList);
     }
 
@@ -81,25 +80,25 @@ public class ProductController {
             double price = Double.parseDouble(priceField.getText());
             int quantity = Integer.parseInt(quantityField.getText());
 
-            Product newProduct = new Product(name, price, quantity);
+            LaptopProduct newProduct = new LaptopProduct(name, price, quantity);
             productList.add(newProduct);
 
-            // Clear input fields after adding
+           //Xóa nội dung trong các trường nhập sau khi thêm vào.
             nameField.clear();
             priceField.clear();
             quantityField.clear();
         } catch (NumberFormatException e) {
-            // Handle invalid input
+            // Xử lý đầu vào không hợp lệ
             System.out.println("Invalid input: " + e.getMessage());
         }
     }
 
-    private void handleEdit(Product product) {
-        // Handle editing logic here
+    private void handleEdit(LaptopProduct product) {
+        // xử lý chỉnh sửa
         System.out.println("Editing: " + product.getName());
     }
 
-    private void handleDelete(Product product) {
+    private void handleDelete(LaptopProduct product) {
         productList.remove(product);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.ngay1;
+package com.example.shop_laptop;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class HelloController {
+public class ShopLoginController {
     @FXML
     private TextField userTextField;
 
@@ -22,15 +22,15 @@ public class HelloController {
     @FXML
     private Label messageLabel;
 
-    private ArrayList<Admin> adminList = new ArrayList<>();
+    private ArrayList<ShopAdmin> adminList = new ArrayList<>();
 
-    public HelloController() {
-        // Dữ liệu mẫu cho admin
-        adminList.add(new Admin("admin1", "password1"));
-        adminList.add(new Admin("admin2", "password2"));
-        adminList.add(new Admin("admin3", "password3"));
-        adminList.add(new Admin("admin4", "password4"));
-        adminList.add(new Admin("admin5", "password5"));
+    public ShopLoginController() {
+        // Dữ liệu cho admin
+        adminList.add(new ShopAdmin("admin1", "password1"));
+        adminList.add(new ShopAdmin("admin2", "password2"));
+        adminList.add(new ShopAdmin("admin3", "password3"));
+        adminList.add(new ShopAdmin("admin4", "password4"));
+        adminList.add(new ShopAdmin("admin5", "password5"));
     }
 
     @FXML
@@ -49,7 +49,7 @@ public class HelloController {
             // Chuyển sang giao diện quản lý sản phẩm sau khi đăng nhập thành công
             try {
                 Stage stage = (Stage) userTextField.getScene().getWindow();
-                Parent root = FXMLLoader.load(getClass().getResource("/com/example/ngay1/product-view.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/com/example/shop_laptop/product-view.fxml"));
                 stage.setScene(new Scene(root, 1600, 1000));
             } catch (IOException e) {
                 e.printStackTrace();

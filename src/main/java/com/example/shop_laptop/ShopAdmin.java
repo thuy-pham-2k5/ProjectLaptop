@@ -1,10 +1,10 @@
-package com.example.ngay1;
+package com.example.shop_laptop;
 
-public class Admin {
+public class ShopAdmin {
     private String username;
     private String password;
 
-    public Admin(String username, String password) {
+    public ShopAdmin(String username, String password) {
         this.username = username;
         this.password = password;
     }

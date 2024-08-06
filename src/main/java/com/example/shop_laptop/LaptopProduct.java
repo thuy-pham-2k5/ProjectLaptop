@@ -1,11 +1,11 @@
-package com.example.ngay1;
+package com.example.shop_laptop;
 
-public class Product {
+public class LaptopProduct {
     private String name;
     private double price;
     private int quantity;
 
-    public Product(String name, double price, int quantity) {
+    public LaptopProduct(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

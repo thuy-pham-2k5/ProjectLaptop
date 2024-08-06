@@ -1,4 +1,4 @@
-package com.example.ngay1;
+package com.example.shop_laptop;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,11 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class ShopLaptopApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/ngay1/hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1600, 1000);
+        FXMLLoader fxmlLoader = new FXMLLoader(ShopLaptopApplication.class.getResource("/com/example/shop_laptop/shop-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Login Application");
         stage.setScene(scene);
         stage.show();
@@ -21,4 +21,3 @@ public class HelloApplication extends Application {
         launch();
     }
 }
-
