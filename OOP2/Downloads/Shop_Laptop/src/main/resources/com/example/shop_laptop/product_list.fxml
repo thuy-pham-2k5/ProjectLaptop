@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.shop_laptop.productlist.ProductListController">
+    <left>
+        <VBox spacing="10" maxWidth="200">
+            <padding>
+                <Insets bottom="10" top="10" left="10" right="10"/>
+            </padding>
+
+            <!-- Thêm ImageView để chèn hình ảnh -->
+            <ImageView fx:id="logo" fitWidth="180" fitHeight="100" preserveRatio="true">
+                <image>
+                    <Image url="https://drive.google.com/uc?export=view&amp;id=1aAA6Fj5MDfbouCBeiAbcP0bxbZoyeZlu"/>
+                </image>
+            </ImageView>
+            <Button text="Trang 1" onAction="#goToPage1"/>
+            <Button text="Trang 2" onAction="#goToPage2"/>
+            <Button text="Trang 3" onAction="#goToPage3"/>
+            <!-- Thêm các nút khác nếu cần -->
+        </VBox>
+    </left>
+
+    <right>
+        <VBox spacing="10" alignment="CENTER" fillWidth="true">
+            <Label text="4P Tech Store" alignment="CENTER" style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <padding>
+                    <Insets top="0" bottom="0" right="10" left="0"/>
+                </padding>
+                <Button text="Add Student" onAction="#handleAddButtonAction"/>
+            </HBox>
+
+            <TableView fx:id="tableView" prefWidth="600" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+                    <TableColumn fx:id="priceColumn" text="Price" prefWidth="50"/>
+                    <TableColumn fx:id="actionColumn" text="Actions" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+    </right>
+
+</BorderPane>

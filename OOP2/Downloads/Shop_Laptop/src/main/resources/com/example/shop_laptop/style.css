@@ -1,0 +1,25 @@
+/*style.css*/
+
+.root {
+    -fx-background-image: url("https://neoview.lk/product_images/price_list/a771dfc9a5d6c51e5d817c53d9aa9592.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+.vbox {
+    -fx-padding: 20;
+}
+/*.highlight-text-field {*/
+/*    -fx-text-fill: white; !* Màu chữ trắng *!*/
+/*    -fx-background-color: rgba(0, 0, 0, 0.5); !* Nền bán trong suốt *!*/
+/*    -fx-font-weight: bold; !* Chữ đậm *!*/
+/*    -fx-font-size: 20px; !* Kích thước chữ *!*/
+/*}*/
+
+/*.highlight-password-field {*/
+/*    -fx-text-fill: white; !* Màu chữ trắng *!*/
+/*    -fx-background-color: rgba(0, 0, 0, 0.5); !* Nền bán trong suốt *!*/
+/*    -fx-font-weight: bold; !* Chữ đậm *!*/
+/*    -fx-font-size: 20px; !* Kích thước chữ *!*/
+/*}*/
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.shop_laptop.productlist.AddProductController"
+      spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Hộp chứa hình ảnh và trường ID -->
+    <HBox spacing="10">
+        <ImageView fx:id="logoGroup1" fitHeight="50" fitWidth="50" preserveRatio="true"/>
+        <VBox>
+            <TextField fx:id="idField" promptText="ID"/>
+            <TextField fx:id="nameField" promptText="Name"/>
+            <TextField fx:id="priceField" promptText="Price"/>
+        </VBox>
+    </HBox>
+
+    <Button text="Add" onAction="#handleAdd"/>
+    <Button text="Cancel" onAction="#handleCancel"/>
+</VBox>

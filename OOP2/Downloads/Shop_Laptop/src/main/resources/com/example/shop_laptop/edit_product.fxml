@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.shop_laptop.productlist.EditProductController">
+    <children>
+        <TextField fx:id="idField" promptText="ID" layoutX="14" layoutY="14" />
+        <TextField fx:id="nameField" promptText="Name" layoutX="14" layoutY="44" />
+        <TextField fx:id="priceField" promptText="Price" layoutX="14" layoutY="74" />
+        <Button fx:id="okButton" text="OK" layoutX="14" layoutY="104" onAction="#handleOkAction" />
+        <Button fx:id="cancelButton" text="Cancel" layoutX="80" layoutY="104" onAction="#handleCancelAction" />
+    </children>
+</AnchorPane>
+

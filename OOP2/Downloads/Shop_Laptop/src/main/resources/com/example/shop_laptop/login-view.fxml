@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+
+<VBox alignment="CENTER" spacing="10.0" styleClass="vbox" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shop_laptop.signin.LoginController">
+    <VBox alignment="CENTER" prefWidth="400" prefHeight="90" spacing="5.0">
+        <HBox alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+            <Label text="Username: ">
+                <padding>
+                    <Insets bottom="5.0" top="5.0"/>
+                </padding>
+            </Label>
+            <TextField fx:id="username" maxHeight="90" maxWidth="400" minHeight="15" minWidth="100" prefHeight="30" prefWidth="200" promptText="Nhập tên đăng nhập..." HBox.hgrow="ALWAYS"/> <!-- HBox.hgrow="ALWAYS" -->
+        </HBox>
+        <Region prefHeight="5.0"/> <!-- Khoảng cách 5.0px giữa TextField và PasswordField -->
+        <HBox alignment="CENTER" spacing="10" HBox.hgrow="ALWAYS">
+            <Label text="Password: ">
+                <padding>
+                    <Insets bottom="5.0" top="5.0"/>
+                </padding>
+            </Label>
+            <PasswordField fx:id="password" maxHeight="90" maxWidth="400" minHeight="15" minWidth="100" prefHeight="30" prefWidth="200" promptText="Nhập mật khẩu..." HBox.hgrow="ALWAYS"/> <!-- HBox.hgrow="ALWAYS" -->
+        </HBox>
+        <Region prefHeight="10.0"/> <!-- Khoảng cách giữa PasswordField và Button -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#login" text="Login" />
+        </HBox>
+    </VBox>
+</VBox>
